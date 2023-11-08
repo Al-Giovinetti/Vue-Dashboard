@@ -27,5 +27,6 @@ export default {
     main{
         width: 80vw;
         background-color: yellow;
+        padding: 1rem;
     }
 </style>
