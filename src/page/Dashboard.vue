@@ -7,6 +7,7 @@
     </body>
 </template>
 <script>
+import axios from "axios"
 import Navbar from "../components/Navbar.vue"
 
 export default {
@@ -18,8 +19,27 @@ export default {
 
     data(){
         return{
-
+            urlDataForTable:'https://file.notion.so/f/s/f653ce74-5a61-4176-9bbf-b8acb3e5927b/data.json?id=90a8bbbb-46be-47a2-be85-b126c5911cab&table=block&spaceId=4c49ff97-016b-4669-8de5-4479dd1a86e1&expirationTimestamp=1699545600000&signature=ZfK0u_jCiZ9U9X3ZVHt2TfmVkHJzbuCfeQ8OwCY4VcY&downloadName=data.json',
+            dataForTable:[]
         }
+    },
+
+    methods:{
+        getTableList(){
+            axios.get(this.urlDataForTable).then((response) => {
+                // handle success
+                console.log(response.data);
+                this.dataForTable = response.data
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+        }
+    },
+
+    created(){
+        this.getTableList()
     }
 }
 </script>
