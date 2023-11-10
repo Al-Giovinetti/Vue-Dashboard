@@ -3,6 +3,9 @@
         <Navbar />
         <main>
             <TabMonthlyConnection :monthlyConnection="dataForTable.MonthlyConnections" />
+            <div class="second-row">
+                <TabUserAge :userAge="dataForTable.UsersAgeRange" />
+            </div>
         </main>
     </body>
 </template>
@@ -10,6 +13,7 @@
 import axios from "axios"
 import Navbar from "../components/Navbar.vue"
 import TabMonthlyConnection from "../components/TabMonthlyConnection.vue"
+import TabUserAge from "../components/TabUserAge.vue"
 
 export default {
     name:"Dashboard",
@@ -17,6 +21,7 @@ export default {
     components:{
         Navbar,
         TabMonthlyConnection,
+        TabUserAge,
     },
 
     data(){
@@ -30,7 +35,7 @@ export default {
         getTableList(){
             axios.get(this.urlDataForTable).then((response) => {
                 // handle success
-                //console.log(response.data);
+                console.log(response.data);
                 this.dataForTable = response.data
             })
             .catch(function (error) {
@@ -50,5 +55,9 @@ export default {
         width: 80vw;
         background-color: yellow;
         padding: 1rem;
+    }
+    div.second-row{
+        display: flex;
+        margin-top: 1rem;
     }
 </style>

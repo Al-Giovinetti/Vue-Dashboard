@@ -23,7 +23,6 @@ export default {
         createGraph(){
             let monthList = [];
             let connectionList = [];
-            console.log(this.dataTab)
            
             this.monthlyConnection.forEach((element) => {
                 monthList.push(element.month)
