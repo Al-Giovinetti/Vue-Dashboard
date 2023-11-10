@@ -84,6 +84,7 @@ export default {
         margin: auto;
         width: 100%;
         background-color: white;
+        padding: 1rem;
     }
 }
 </style>
