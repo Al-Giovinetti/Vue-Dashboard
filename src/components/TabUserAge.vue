@@ -44,9 +44,19 @@ export default {
                         ],
                     }],
                 },
+
                 options:{
+                    plugins:{
+                        title:{
+                            display:true,
+                            text:'User Age Rage'
+                        },
+                        legend:{
+                            display:false,
+                        },
+                    },
                     responsive:true,
-                    maintainAspectRatio:false, 
+                    maintainAspectRatio:false,
                 }
 
                 
@@ -69,7 +79,7 @@ div.tab-user-age{
     background-color: white;
     padding: 1rem;
     height: 30vh;
-
+    margin-right: 1rem;
 }
     
 </style>

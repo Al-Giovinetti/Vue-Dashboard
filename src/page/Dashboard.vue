@@ -5,6 +5,7 @@
             <TabMonthlyConnection :monthlyConnection="dataForTable.MonthlyConnections" />
             <div class="second-row">
                 <TabUserAge :userAge="dataForTable.UsersAgeRange" />
+                <TabSystem :operatingSystem="dataForTable.Devices" />
             </div>
         </main>
     </body>
@@ -14,6 +15,7 @@ import axios from "axios"
 import Navbar from "../components/Navbar.vue"
 import TabMonthlyConnection from "../components/TabMonthlyConnection.vue"
 import TabUserAge from "../components/TabUserAge.vue"
+import TabSystem from "../components/TabSystem.vue"
 
 export default {
     name:"Dashboard",
@@ -22,6 +24,7 @@ export default {
         Navbar,
         TabMonthlyConnection,
         TabUserAge,
+        TabSystem,
     },
 
     data(){
@@ -58,6 +61,7 @@ export default {
     }
     div.second-row{
         display: flex;
+        justify-content: center;
         margin-top: 1rem;
     }
 </style>
