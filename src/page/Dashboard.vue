@@ -2,19 +2,21 @@
     <body>
         <Navbar />
         <main>
-            main
+            <TabMonthlyConnection :monthlyConnection="dataForTable.MonthlyConnections" />
         </main>
     </body>
 </template>
 <script>
 import axios from "axios"
 import Navbar from "../components/Navbar.vue"
+import TabMonthlyConnection from "../components/TabMonthlyConnection.vue"
 
 export default {
     name:"Dashboard",
 
     components:{
-        Navbar
+        Navbar,
+        TabMonthlyConnection,
     },
 
     data(){
@@ -28,12 +30,12 @@ export default {
         getTableList(){
             axios.get(this.urlDataForTable).then((response) => {
                 // handle success
-                console.log(response.data);
+                //console.log(response.data);
                 this.dataForTable = response.data
             })
             .catch(function (error) {
                 // handle error
-                console.log(error);
+                console.log('Errore nella richiesta API', error);
             })
         }
     },
