@@ -7,4 +7,9 @@
 body{
     display: flex;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    overflow: auto;
 }

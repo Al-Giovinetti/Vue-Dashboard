@@ -3,7 +3,7 @@
         <h1>- Dashbool -</h1>
         <div class="user-info">
             <div class="user-image">
-                image
+                <img src="https://www.italia.it/content/dam/tdh/it/interests/italia/15-spiagge-scenografiche-da-non-perdere-in-italia/media/20210416183753-gettyimages-1290817272-orizz.jpg" alt="img-Profile">
             </div>
             <div class="user-name">
                 <p>Welcome</p>
@@ -11,7 +11,7 @@
             </div>
         </div>
         <h2>general</h2>
-        <div class="bar">-------------------------------------------</div>
+        <div class="bar"></div>
         <nav>
             <ul>
                 <li v-for="element in navElements">
@@ -77,8 +77,8 @@ export default {
 
 <style lang="scss" scoped>
     section{
-        width: 20vw;
-        background: red;
+        width: 15vw;
+        background: rgb(135, 87, 255);
         padding: 1rem;
     }
     div.user-info{
@@ -87,7 +87,29 @@ export default {
 
         .user-image{
             margin-right: 1rem;
+            width: 70px;
+            height: 70px;
+
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
         }
+
+        div.user-name{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    div.bar{
+        background-color: yellow;
+        height: 3px;
+        margin-top: 0.5rem;
+        border-radius: 20px;
     }
 
     nav li{

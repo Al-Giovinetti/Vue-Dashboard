@@ -22,9 +22,6 @@ export default {
                 operetorList.push(element.os);
                 connectionList.push(element.connections);
             });
-            console.log(operetorList);
-            console.log(connectionList);
-
 
             const systGraph = document.getElementById('operating-system');
 

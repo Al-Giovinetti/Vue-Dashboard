@@ -81,7 +81,6 @@ export default {
     height: 30vh;
     text-align: center;
     #month-connections{
-        margin: auto;
         width: 100%;
         background-color: white;
         padding: 1rem;
